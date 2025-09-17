@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.1 on win32)" generated="2025-09-14T23:36:26.281942" rpa="false" schemaversion="5">
+<suite id="s1" name="Newtest" source="C:\Users\hp\Desktop\PythonGoogleForm\newtest.robot">
+<kw name="Setup" type="SETUP">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>30</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-09-14T23:36:29.178470" elapsed="0.001002"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>30</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-09-14T23:36:29.180471" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2025-09-14T23:36:29.174472" elapsed="0.006999"/>
+</kw>
+<test id="s1-t1" name="New Test" line="7">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-14T23:36:29.188473" level="INFO">Opening browser 'chrome' to base url 'https://docs.google.com/forms/d/e/1FAIpQLSdS26l6h2iffHLO8CXXjOgn1BrEPGc701VDvWKnjqO67h52Rg/viewform'.</msg>
+<arg>https://docs.google.com/forms/d/e/1FAIpQLSdS26l6h2iffHLO8CXXjOgn1BrEPGc701VDvWKnjqO67h52Rg/viewform</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-14T23:36:29.187474" elapsed="14.551694"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-14T23:36:43.743168" level="INFO">Typing text '123' into text field '//input[@aria-labelledby='i1 i4']'.</msg>
+<arg>//input[@aria-labelledby='i1 i4']</arg>
+<arg>123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-14T23:36:43.742184" elapsed="0.508982"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-14T23:36:44.502168" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-14T23:36:44.252165" elapsed="0.251005"/>
+</kw>
+<status status="PASS" start="2025-09-14T23:36:29.182474" elapsed="15.323710"/>
+</test>
+<status status="PASS" start="2025-09-14T23:36:26.286943" elapsed="18.223222"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Newtest" id="s1" pass="1" fail="0" skip="0">Newtest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
