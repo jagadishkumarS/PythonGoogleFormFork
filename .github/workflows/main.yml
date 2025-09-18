@@ -1,7 +1,7 @@
 name: Run Robot Framework Selenium Test (Chrome)
 
 on:
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch:
 
 jobs:
   robot-selenium-test:
@@ -16,15 +16,15 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Install Chrome and WebDriver
+    - name: Install Chrome and Xvfb
       run: |
         sudo apt-get update
         sudo apt-get install -y wget unzip xvfb
         wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         sudo apt install -y ./google-chrome-stable_current_amd64.deb
-        CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+\.\d+')
-        wget https://chromedriver.storage.googleapis.com/${CHROME_VERSION}/chromedriver_linux64.zip || wget https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
-        unzip chromedriver_linux64.zip
+
+    - name: Use bundled Chromedriver
+      run: |
         sudo mv chromedriver /usr/bin/chromedriver
         sudo chmod +x /usr/bin/chromedriver
 
