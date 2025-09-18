@@ -36,3 +36,12 @@ jobs:
     - name: Run Selenium Test with Chrome
       run: |
         xvfb-run --auto-servernum robot newtest.robot
+
+            - name: Upload Robot Framework Report
+    - uses: actions/upload-artifact@v3
+      with:
+        name: robot-report
+        path: |
+          report.html
+          log.html
+          output.xml
